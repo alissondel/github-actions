@@ -1,0 +1,19 @@
+name: "CI (Integration Continuos): Main Workflow"
+
+on:
+  # Ativa o fluxo de trabalho para cada push ou pull na branch main
+  push:
+  pull_request:
+    types: [opened, syschronize]
+
+jobs:
+  linter:
+    # Exucutado sistema operacional para executar a operação
+    runs-on: ubuntu-latest
+    steps:
+      # Pré configuração do github para rodar comandos git
+      - uses: actions/checkout@v4
+
+      # Executas apenas comandos no shell
+      - name: Run Linter in Code
+        run: npm run lint

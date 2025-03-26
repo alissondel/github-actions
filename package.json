@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +17,12 @@
     "next": "^15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "eslint": "9.23.0",
+    "eslint-config-next": "15.2.4",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.5",
+    "prettier": "3.5.3"
   }
 }
