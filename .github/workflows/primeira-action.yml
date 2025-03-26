@@ -23,4 +23,4 @@ jobs:
 
       # Executas apenas comandos no shell
       - name: Run a list files
-        run: ls -la!
+        run: ls -la
