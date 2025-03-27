@@ -1,0 +1,38 @@
+name: "CD (Devlivery Continuos): Vercel Workflow"
+
+ # Variaveis de ambiente secreta
+env: 
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID}}
+  VERCEL_PROJECT_ID: ${{ secrets.PROJECT_ID}}
+
+# Define as etapas para este fluxo de trabalho
+on:
+  # Ativa o fluxo de trabalho para cada push ou pull na branch main
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    # Exucutado sistema operacional para executar a operação
+    runs-on: ubuntu-latest
+    steps:
+      # Pré configuração do github para rodar comandos git
+      - uses: actions/checkout@v4
+
+       # Executa apenas comandos no shell
+      - name: Run Installation
+        run: npm install
+
+      - name: Run Linter Fix
+        run: npm run lint -- --fix
+
+      # Executa apenas comandos no shell
+      - name: Run Linter
+        run: npm run lint
+
+      # Executa apenas comandos no shell
+      - name: Run Deploy
+        run: npm run deploy:prod
+
+        
