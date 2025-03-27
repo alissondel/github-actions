@@ -14,10 +14,13 @@ jobs:
       # Pré configuração do github para rodar comandos git
       - uses: actions/checkout@v4
 
-       # Executas apenas comandos no shell
+       # Executa apenas comandos no shell
       - name: Run Installation
         run: npm install
 
-      # Executas apenas comandos no shell
-      - name: Run Linter in Code
+      - name: Run Linter in Code 1
+        run: npm run lint --fix
+
+      # Executa apenas comandos no shell
+      - name: Run Linter in Code 2
         run: npm run lint
