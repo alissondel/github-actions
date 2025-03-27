@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "npm run lint -- --fix",
-    "deploy:prod": "npm run deploy --prod --token=$VERCEL_TOKEN",
-    "deploy": "npm run build && npx vercel ./out --confirm --no-clipboard"
+    "deploy:prod": "npm run build && vercel ./out --confirm --no-clipboard"
   },
   "keywords": [],
   "author": "",
