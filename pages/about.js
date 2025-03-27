@@ -4,5 +4,5 @@ export default function About() {
       <h1>Page, about!</h1>
       <p>wdwd</p>
     </div>
-  );
+  )
 }
