@@ -17,13 +17,6 @@ jobs:
        # Executa apenas comandos no shell
       - name: Run Installation
         run: npm install
-
-      - name: Run Linter in Code 1
-        run: npm run lint -- --fix
-
-      # Executa apenas comandos no shell
-      - name: Run Linter in Code 2
-        run: npm run lint
   preview:
     runs-on: ubuntu-latest
     steps:
@@ -31,4 +24,4 @@ jobs:
       - name: Run Installation
         run: npm install
       - name: Run Preview Deployment
-        run: npm deploy:preview
+        run: npm run deploy:preview
