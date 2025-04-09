@@ -13,21 +13,11 @@ on:
     types: [opened, syschronize]
 
 jobs:
-  linter:
-    # Exucutado sistema operacional para executar a operação
-    runs-on: ubuntu-latest
-    steps:
-      # Pré configuração do github para rodar comandos git
-      - uses: actions/checkout@v4
-
-       # Executa apenas comandos no shell
-      - name: Run Installation
-        run: npm install
   preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Run Installation
-        run: npm install
+        run: npm run install
       - name: Run Preview Deployment
         run: npm run deploy:preview
