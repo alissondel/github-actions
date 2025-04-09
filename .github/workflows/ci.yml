@@ -24,3 +24,11 @@ jobs:
       # Executa apenas comandos no shell
       - name: Run Linter in Code 2
         run: npm run lint
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Installation
+        run: npm install
+      - name: Run Preview Deployment
+        run: npm deploy:preview
