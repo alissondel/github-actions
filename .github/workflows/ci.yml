@@ -6,7 +6,6 @@ env:
   VERCEL_ORG_ID: "VWvkGCQcPsOZyxYxkHbQ2FQq"
   VERCEL_PROJECT_ID: "prj_1TckW8bSU04Nfzp2Xs22tO7emiKf"
   
-
 on:
   # Ativa o fluxo de trabalho para cada push ou pull na branch main
   push:
