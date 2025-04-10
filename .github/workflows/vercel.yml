@@ -28,7 +28,7 @@ jobs:
         run: npm install
 
       - name: Run Linter Fix
-        run: npm run lint -- --fix
+        run: npm run lint --fix
 
       # Executa apenas comandos no shell
       - name: Run Linter
