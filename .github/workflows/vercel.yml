@@ -2,9 +2,12 @@ name: "CD (Devlivery Continuos): Vercel Workflow"
 
  # Variaveis de ambiente secreta
 env: 
-  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID}}
-  VERCEL_PROJECT_ID: ${{ secrets.PROJECT_ID}}
+  # VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  # VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID}}
+  # VERCEL_PROJECT_ID: ${{ secrets.PROJECT_ID}}
+  VERCEL_TOKEN: "LyBpvh5bAJEVVhoLdPUIhJZ1"
+  VERCEL_ORG_ID: "VWvkGCQcPsOZyxYxkHbQ2FQq"
+  VERCEL_PROJECT_ID: "prj_1TckW8bSU04Nfzp2Xs22tO7emiKf"
 
 # Define as etapas para este fluxo de trabalho
 on:

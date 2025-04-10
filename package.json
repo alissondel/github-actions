@@ -8,9 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "npm run lint --fix",
     "deploy:prod": "npm run deploy:staging --prod",
-    "deploy:staging": "npm run build && vercel ./out --confirm -no-clipboard --token=$VERCEL_TOKEN",
+    "deploy:staging": "npm run build && vercel ./out --yes --no-clipboard --token=LyBpvh5bAJEVVhoLdPUIhJZ1",
     "deploy:preview": "node ./scripts/pullRequestPreview"
   },
   "keywords": [],
