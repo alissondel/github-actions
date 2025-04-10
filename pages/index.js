@@ -4,4 +4,4 @@ export default function Home() {
       <h1>Page, Home!</h1>
     </div>
   );
-}
+};
