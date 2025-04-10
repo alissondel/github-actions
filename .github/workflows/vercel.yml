@@ -1,7 +1,8 @@
-name: "CD (Devlivery Continuos): Vercel Workflow"
+name:
+  "CD (Devlivery Continuos): Vercel Workflow"
 
- # Variaveis de ambiente secreta
-env: 
+  # Variaveis de ambiente secreta
+env:
   # VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
   # VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID}}
   # VERCEL_PROJECT_ID: ${{ secrets.PROJECT_ID}}
@@ -13,7 +14,7 @@ env:
 on:
   # Ativa o fluxo de trabalho para cada push ou pull na branch main
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   deploy:
@@ -23,7 +24,7 @@ jobs:
       # Pré configuração do github para rodar comandos git
       - uses: actions/checkout@v4
 
-       # Executa apenas comandos no shell
+        # Executa apenas comandos no shell
       - name: Run Installation
         run: npm install
 
@@ -37,5 +38,3 @@ jobs:
       # Executa apenas comandos no shell
       - name: Run Deploy
         run: npm run deploy:prod
-
-        

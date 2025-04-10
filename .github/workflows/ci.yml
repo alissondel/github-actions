@@ -1,11 +1,11 @@
-name: "CI (Integration Continuos): Main Workflow"
+name:
+  "CI (Integration Continuos): Main Workflow"
 
- # Variaveis de ambiente secreta 
-env: 
+  # Variaveis de ambiente secreta
+env:
   VERCEL_TOKEN: "LyBpvh5bAJEVVhoLdPUIhJZ1"
   VERCEL_ORG_ID: "VWvkGCQcPsOZyxYxkHbQ2FQq"
   VERCEL_PROJECT_ID: "prj_1TckW8bSU04Nfzp2Xs22tO7emiKf"
-  
 
 on:
   # Ativa o fluxo de trabalho para cada push ou pull na branch main

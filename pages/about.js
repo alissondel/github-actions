@@ -5,4 +5,4 @@ export default function About() {
       <p>wdwd</p>
     </div>
   );
-};
+}

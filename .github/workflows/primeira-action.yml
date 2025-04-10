@@ -4,7 +4,7 @@ name: "CI (Integration Continuos): Primary Action"
 on:
   # Ativa o fluxo de trabalho para cada push ou pull na branch main
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
     types: [opened, syschronize]
 
