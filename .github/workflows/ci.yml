@@ -40,3 +40,24 @@ jobs:
         run: npm run deploy:preview
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+  test_e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # https://github.com/actions/setup-node
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.15.1
+
+      #https://github.com/cypress-io/github-action
+      - name: Cypress
+        uses: cypress-io/github-action@v6
+        with: 
+          browser: chrome 
+
+      - name: Run Installation
+        run: npm install
+
+      - name: Cypress run
+        run: npm run test:e2e

@@ -11,7 +11,9 @@
     "lint:fix": "npm run lint --fix",
     "deploy:prod": "npm run deploy:staging --prod",
     "deploy:staging": "npm run build && vercel ./out --confirm --no-clipboard --token=LyBpvh5bAJEVVhoLdPUIhJZ1",
-    "deploy:preview": "node ./scripts/pullRequestPreview"
+    "deploy:preview": "node ./scripts/pullRequestPreview",
+    "test:e2e:open": "cypress open",
+    "test:e2e": "cypress run --config-file=cypress.config.js"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "cypress": "^14.3.0",
     "eslint": "9.23.0",
     "eslint-config-next": "15.2.4",
     "eslint-config-prettier": "^10.1.1",
