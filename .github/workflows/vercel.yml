@@ -1,38 +1,35 @@
 name:
   "CD (Devlivery Continuos): Vercel Workflow"
 
-  # Variaveis de ambiente secreta
+# Variáveis de ambiente secretas (armazenadas no GitHub Secrets)
 env:
-  # VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-  # VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID}}
-  # VERCEL_PROJECT_ID: ${{ secrets.PROJECT_ID}}
-  VERCEL_TOKEN: "LyBpvh5bAJEVVhoLdPUIhJZ1"
-  VERCEL_ORG_ID: "VWvkGCQcPsOZyxYxkHbQ2FQq"
-  VERCEL_PROJECT_ID: "prj_1TckW8bSU04Nfzp2Xs22tO7emiKf"
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID}}
+  VERCEL_PROJECT_ID: ${{ secrets.PROJECT_ID}}
 
-# Define as etapas para este fluxo de trabalho
+# Define os gatilhos que iniciam este workflow
 on:
-  # Ativa o fluxo de trabalho para cada push ou pull na branch main
+  # Dispara o workflow em pushs na branch main
   push:
     branches: ["main"]
 
 jobs:
   deploy:
-    # Exucutado sistema operacional para executar a operação
+    # Define o sistema operacional da máquina virtual onde as ações serão executadas
     runs-on: ubuntu-latest
+
     steps:
-      # Pré configuração do github para rodar comandos git
+      # Faz o checkout do repositório (baixa o código-fonte)
       - uses: actions/checkout@v4
 
-        # Executa apenas comandos no shell
+      # Instala as dependências do projeto
       - name: Run Installation
         run: npm install
 
+      # Formata o código usando o Prettier
       - name: Format code with Prettier
         run: npx prettier --write .
-      # - name: Run Linter Fix
-      #   run: npm run lint
 
-      # Executa apenas comandos no shell
+      # Executa o comando de deploy para produção
       - name: Run Deploy
         run: npm run deploy:prod
